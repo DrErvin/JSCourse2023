@@ -26,4 +26,18 @@ const restaurant = {
       close: 24,
     },
   },
+  orderDelivery: function ({ time, address, mainIndex, starterIndex }) {
+    console.log(`Order recieved! ${this.starterMenu[starterIndex]} and
+      ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  },
 };
+
+restaurant.orderDelivery({
+  time: '22:3',
+  address: 'Put zivota 3',
+  mainIndex: 2,
+  starterIndex: 3,
+});
+
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
