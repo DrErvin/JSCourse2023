@@ -30,14 +30,26 @@ const restaurant = {
     console.log(`Order recieved! ${this.starterMenu[starterIndex]} and
       ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
 };
 
-restaurant.orderDelivery({
-  time: '22:3',
-  address: 'Put zivota 3',
-  mainIndex: 2,
-  starterIndex: 3,
-});
+const ingridients = [
+  prompt('Your first ingridient: '),
+  prompt('Your second ingridient: '),
+  prompt('Your third ingridient: '),
+];
+
+restaurant.orderPasta(...ingridients);
+
+// restaurant.orderDelivery({
+//   time: '22:3',
+//   address: 'Put zivota 3',
+//   mainIndex: 2,
+//   starterIndex: 3,
+// });
 
 // const { name, openingHours, categories } = restaurant;
 // console.log(name, openingHours, categories);
