@@ -70,46 +70,46 @@ const openingHours = {
 
 //CODING CHALLANGE #1
 
-// const game = {
-//   team1: 'Bayern Munich',
-//   team2: 'Borrussia Dortmund',
-//   players: [
-//     [
-//       'Neuer',
-//       'Pavard',
-//       'Martinez',
-//       'Alaba',
-//       'Davies',
-//       'Kimmich',
-//       'Goretzka',
-//       'Coman',
-//       'Muller',
-//       'Gnarby',
-//       'Lewandowski',
-//     ],
-//     [
-//       'Burki',
-//       'Schulz',
-//       'Hummels',
-//       'Akanji',
-//       'Hakimi',
-//       'Weigl',
-//       'Witsel',
-//       'Hazard',
-//       'Brandt',
-//       'Sancho',
-//       'Gotze',
-//     ],
-//   ],
-//   score: '4:0',
-//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-//   date: 'Nov 9th, 2037',
-//   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
-//   },
-// };
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
 
 // const [players1, players2] = game.players;
 // console.log(players1);
@@ -153,23 +153,54 @@ const openingHours = {
 // }
 
 //PROPERTY NAMES
-const properties = Object.keys(restaurant.openingHours);
-console.log(properties);
+// const properties = Object.keys(restaurant.openingHours);
+// console.log(properties);
 
-let openStr = `We are open on ${properties.length} days: `;
-for (const key of properties) {
-  openStr += `${key}, `;
+// let openStr = `We are open on ${properties.length} days: `;
+// for (const key of properties) {
+//   openStr += `${key}, `;
+// }
+// console.log(openStr);
+
+// // Poperty VALUES
+// const values = Object.values(openingHours);
+// console.log(values);
+
+// // Entire object
+// const entries = Object.entries(openingHours);
+// console.log(entries);
+
+// for (const [key, { open, close }] of entries) {
+//   console.log(`On ${key} we open at ${open} and close at ${close}`);
+// }
+
+// CODING CHALLANGE #2
+// 1 Task
+const entries = Object.entries(game.scored);
+for (const [counter, name] of entries) {
+  console.log(`Goal ${Number(counter) + 1}: ${name}`);
 }
-console.log(openStr);
 
-// Poperty VALUES
-const values = Object.values(openingHours);
-console.log(values);
-
-// Entire object
-const entries = Object.entries(openingHours);
-console.log(entries);
-
-for (const [key, { open, close }] of entries) {
-  console.log(`On ${key} we open at ${open} and close at ${close}`);
+// Task 2
+const values = Object.values(game.odds);
+let sum = 0;
+for (const value of values) {
+  sum += value;
 }
+console.log(sum / values.length);
+
+// Task 3
+//console.log(game['team1']);
+console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+const oddsEntries = Object.entries(game.odds);
+for (const [teamNo, odd] of oddsEntries) {
+  const teamStr = teamNo === 'x' ? 'draw' : `victory ${game[teamNo]}`;
+  console.log(`Odd of ${teamStr}: ${odd}`);
+}
+// Task 4
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+}
+
+console.log(scorers);
