@@ -176,31 +176,59 @@ const game = {
 
 // CODING CHALLANGE #2
 // 1 Task
-const entries = Object.entries(game.scored);
-for (const [counter, name] of entries) {
-  console.log(`Goal ${Number(counter) + 1}: ${name}`);
-}
+// const entries = Object.entries(game.scored);
+// for (const [counter, name] of entries) {
+//   console.log(`Goal ${Number(counter) + 1}: ${name}`);
+// }
 
-// Task 2
-const values = Object.values(game.odds);
-let sum = 0;
-for (const value of values) {
-  sum += value;
-}
-console.log(sum / values.length);
+// // Task 2
+// const values = Object.values(game.odds);
+// let sum = 0;
+// for (const value of values) {
+//   sum += value;
+// }
+// console.log(sum / values.length);
 
-// Task 3
-//console.log(game['team1']);
-console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
-const oddsEntries = Object.entries(game.odds);
-for (const [teamNo, odd] of oddsEntries) {
-  const teamStr = teamNo === 'x' ? 'draw' : `victory ${game[teamNo]}`;
-  console.log(`Odd of ${teamStr}: ${odd}`);
-}
-// Task 4
-const scorers = {};
-for (const player of game.scored) {
-  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
-}
+// // Task 3
+// //console.log(game['team1']);
+// console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+// const oddsEntries = Object.entries(game.odds);
+// for (const [teamNo, odd] of oddsEntries) {
+//   const teamStr = teamNo === 'x' ? 'draw' : `victory ${game[teamNo]}`;
+//   console.log(`Odd of ${teamStr}: ${odd}`);
+// }
+// // Task 4
+// const scorers = {};
+// for (const player of game.scored) {
+//   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+// }
 
-console.log(scorers);
+// console.log(scorers);
+
+// const foodSet = new Set(['Pizza', 'Pasta', 'Burek']);
+// console.log(foodSet);
+
+// const foodSetEntries = foodSet.entries();
+// for (const [i, value] of foodSetEntries) {
+//   console.log(i, value);
+// }
+
+// console.log(new Set('Shmedtmann').size);
+
+const rest = new Map();
+rest
+  .set('name', 'Classico Italiano')
+  .set(1, 'Firenze, Italy')
+  .set('categories', ['Italian', 'Pizzeria', 'Vegeterian'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open')
+  .set(false, 'We are closed');
+
+console.log(rest);
+
+console.log(rest.get(1));
+const head = document.querySelector('h1');
+rest.set(head, 'Heading');
+console.log(rest);
+console.log(rest.get(head));
