@@ -272,19 +272,41 @@ const gameEvents = new Map([
   [80, '⚽ GOAL'],
   [92, '� Yellow card'],
 ]);
+// Challange 3
+// // Task 1
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
+// // Task 2
+// gameEvents.delete(64);
+// console.log(gameEvents);
+// // Task 3
+// const avg = 90 / gameEvents.size;
+// console.log(`An event happened, on
+// average, every ${avg} minutes`);
+// // Task 4
+// for (const [i, value] of gameEvents) {
+//   const str = i > 45 ? 'Second' : 'First';
+//   console.log(`[${str} Half] ${i}: ${value}`);
+// }
 
+// const announcement =
+//   'All passengers come to boarding door 23. Boarding door 23!';
+// console.log(announcement.replaceAll('door', 'gate'));
+
+// Challange 4
 // Task 1
-const events = [...new Set(gameEvents.values())];
-console.log(events);
-// Task 2
-gameEvents.delete(64);
-console.log(gameEvents);
-// Task 3
-const avg = 90 / gameEvents.size;
-console.log(`An event happened, on 
-average, every ${avg} minutes`);
-// Task 4
-for (const [i, value] of gameEvents) {
-  const str = i > 45 ? 'Second' : 'First';
-  console.log(`[${str} Half] ${i}: ${value}`);
-}
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+  console.log(rows);
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(output.padEnd(20, ' '), `✅`.repeat(i + 1));
+  }
+});
