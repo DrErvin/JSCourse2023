@@ -88,9 +88,9 @@ const lufthansa = {
   },
 };
 
-lufthansa.book(239, 'Jonas Schmedtmann');
-lufthansa.book(635, 'John Smith');
-console.log(lufthansa.bookings);
+// lufthansa.book(239, 'Jonas Schmedtmann');
+// lufthansa.book(635, 'John Smith');
+// console.log(lufthansa.bookings);
 
 const eurowings = {
   airline: 'Eurowings',
@@ -104,11 +104,11 @@ const book = lufthansa.book;
 // book(23, 'Sarah Williams');
 
 // Call method
-book.call(eurowings, 23, 'Sarah Williams');
-console.log(eurowings);
+// book.call(eurowings, 23, 'Sarah Williams');
+// console.log(eurowings);
 
-book.call(lufthansa, 239, 'Mary Cooper');
-console.log(lufthansa);
+// book.call(lufthansa, 239, 'Mary Cooper');
+// console.log(lufthansa);
 
 const swiss = {
   airline: 'Swiss Air Lines',
@@ -116,4 +116,41 @@ const swiss = {
   bookings: [],
 };
 
-book.call(swiss, 583, 'Mary Cooper');
+// book.call(swiss, 583, 'Mary Cooper');
+
+const addTax = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+// const addVAT = addTax(0.23);
+// console.log(addVAT(100));
+// console.log(addVAT(23));
+
+const poll = {
+  question: 'What is your favourite programming language?',
+  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  // This generates [0, 0, 0, 0]. More in the next section!
+  answers: new Array(4).fill(0),
+  registerNewAnswer: function () {
+    const str = `${this.question}\n${this.options.join(
+      '\n'
+    )}\n(Write option number)`;
+    let answer = Number(prompt(str));
+
+    typeof answer === 'number' &&
+      answer <= this.answers.length &&
+      this.answers[answer]++;
+    this.displayResults();
+    this.displayResults('string');
+  },
+  displayResults: function (type = 'array') {
+    if (type === 'array') console.log(this.answers);
+    else if (type === 'string')
+      console.log(`Poll results are: ${this.answers.join(', ')}`);
+  },
+};
+
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
