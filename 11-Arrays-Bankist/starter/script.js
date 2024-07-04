@@ -125,3 +125,18 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // currencies2.forEach(function (value, key, map) {
 //   console.log(`${key}: ${value}`);
 // });
+const dogsJulia = [3, 5, 2, 12, 7];
+const dogsKate = [4, 1, 15, 8, 3];
+
+const checkDogs = function (dogsJulia, dogsKate) {
+  const dogsJuliaCorrected = dogsJulia.splice(1, 2);
+  const dogs = dogsJuliaCorrected.concat(dogsKate);
+  console.log(dogs);
+  dogs.forEach((value, index) => {
+    const isDog = value >= 3 ? 'an adult' : 'still a puppy';
+    console.log(
+      `Dog number ${index + 1} is ${isDog}, and is ${value} years old`
+    );
+  });
+};
+checkDogs(dogsJulia, dogsKate);
