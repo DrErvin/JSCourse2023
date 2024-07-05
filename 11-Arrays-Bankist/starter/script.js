@@ -166,9 +166,21 @@ createUsernames(accounts);
 // console.log(accounts);
 const withdrawals = movements.filter(valueMov => valueMov < 0);
 // console.log(withdrawals);
-console.log(movements);
+// console.log(movements);
 const max = movements.reduce((acc, valueMov) => {
   if (acc > valueMov) return acc;
   else return valueMov;
 });
-console.log(max);
+// console.log(max);
+const calcAverageHumanAge = function (ages) {
+  const agesHuman = ages.map(value =>
+    value <= 2 ? 2 * value : 16 + value * 4
+  );
+  console.log(agesHuman);
+  const adults = agesHuman.filter(value => value >= 18);
+  console.log(adults);
+  const average =
+    adults.reduce((acc, value) => (acc += value), 0) / adults.length;
+  return average;
+};
+console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
