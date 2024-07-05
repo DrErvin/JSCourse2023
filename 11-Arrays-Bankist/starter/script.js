@@ -76,6 +76,12 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
+
+const calcDisplayBalance = function (movements) {
+  const total = movements.reduce((add, value) => (add += value), 0);
+  document.querySelector('.balance__value').textContent = `${total} EUR`;
+};
+calcDisplayBalance(account1.movements);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -139,4 +145,30 @@ const checkDogs = function (dogsJulia, dogsKate) {
     );
   });
 };
-checkDogs(dogsJulia, dogsKate);
+// checkDogs(dogsJulia, dogsKate);
+const movementsDescriptions = movements.map(
+  (valueMov, index) =>
+    `Movement ${index + 1}: You ${
+      valueMov > 0 ? 'deposited' : 'withdrew'
+    } ${Math.abs(valueMov)}`
+);
+// console.log(movementsDescriptions);
+const createUsernames = function (accounts) {
+  accounts.forEach(acc => {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(value => value[0])
+      .join('');
+  });
+};
+createUsernames(accounts);
+// console.log(accounts);
+const withdrawals = movements.filter(valueMov => valueMov < 0);
+// console.log(withdrawals);
+console.log(movements);
+const max = movements.reduce((acc, valueMov) => {
+  if (acc > valueMov) return acc;
+  else return valueMov;
+});
+console.log(max);
