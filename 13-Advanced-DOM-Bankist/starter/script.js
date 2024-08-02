@@ -84,8 +84,8 @@ const logo = document.querySelector('.nav__logo');
 logo.alt = 'Beautiful minimalist logo';
 
 // Non-standard
-console.log(logo.designer);
-console.log(logo.getAttribute('designer'));
+// console.log(logo.designer);
+// console.log(logo.getAttribute('designer'));
 logo.setAttribute('company', 'Bankist');
 
 // console.log(logo.src);
@@ -114,3 +114,23 @@ btnScrollTo.addEventListener('click', function (e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+// EVENT Propagation. Event bubbling and capturing
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1) + min);
+
+// const randomColor = () =>
+//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+
+// document.querySelector('.nav__link').addEventListener('click', function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log('LINK', e.target, e.currentTarget);
+// });
+// document.querySelector('.nav__links').addEventListener('click', function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log('CONTAINER', e.target, e.currentTarget);
+// });
+// document.querySelector('.nav').addEventListener('click', function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log('NAV', e.target, e.currentTarget);
+// });
