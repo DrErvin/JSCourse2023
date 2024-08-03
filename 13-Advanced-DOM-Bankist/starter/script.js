@@ -1,12 +1,12 @@
 'use strict';
-
-///////////////////////////////////////
-// Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+///////////////////////////////////////
+// Modal window
 
 const openModal = function (e) {
   e.preventDefault();
@@ -29,6 +29,44 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+// Button scrolling
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+/////////////////////////////////////
+// Page navigation
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+// Event delegation Techique
+// 1. Add event listener to common parent element
+// 2. Determine what element originated the event
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
 const header = document.querySelector('.header');
 // QuearySelector gives a NodeList which is static/not dynamic
 document.querySelector('.header');
@@ -100,21 +138,6 @@ logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
 logo.classList.contains('c');
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
-
-btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect();
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
-
-  section1.scrollIntoView({ behavior: 'smooth' });
-});
-
 // EVENT Propagation. Event bubbling and capturing
 // const randomInt = (min, max) =>
 //   Math.floor(Math.random() * (max - min + 1) + min);
@@ -134,3 +157,21 @@ btnScrollTo.addEventListener('click', function (e) {
 //   this.style.backgroundColor = randomColor();
 //   console.log('NAV', e.target, e.currentTarget);
 // });
+
+// DOM Traaversing
+const h1 = document.querySelector('h1');
+const h4 = document.querySelector('h4');
+
+// Going downards: child
+// console.log(h1.querySelectorAll('.highlight'));
+h1.firstElementChild.style.color = 'white';
+
+// Going upwards: parents
+// console.log(h1.parentNode);
+// console.log(h1.parentElement);
+
+h1.closest('.header').style.background = 'var(--gradient-primary)';
+
+// Going sideways: siblings
+// console.log(h4.previousElementSibling); // h1.previous
+// console.log(h4.nextElementSibling);
