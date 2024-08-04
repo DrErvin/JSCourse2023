@@ -67,6 +67,56 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 });
 
+// Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+  console.log(clicked);
+
+  // Guard clause
+  if (!clicked) return;
+
+  // Remove active classes
+  tabsContent.forEach(c => c.classList.remove(`operations__content--active`));
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+
+  // Active tab
+  clicked.classList.add('operations__tab--active');
+
+  // Active Content Area
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add(`operations__content--active`);
+});
+
+// Menu fade animation
+const nav = document.querySelector('.nav');
+const handleHover = function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+
+// Passing "argument" into handler
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+nav.addEventListener('mouseout', handleHover.bind(1));
+// Normal way of doing the call, also need to add arguments
+// e, opacity into handleHover function above, also change
+// this keyword into opacity
+// nav.addEventListener('mouseout', function (e) {
+//   handleHover(e, 1);
+// });
+
 const header = document.querySelector('.header');
 // QuearySelector gives a NodeList which is static/not dynamic
 document.querySelector('.header');
@@ -164,13 +214,13 @@ const h4 = document.querySelector('h4');
 
 // Going downards: child
 // console.log(h1.querySelectorAll('.highlight'));
-h1.firstElementChild.style.color = 'white';
+// h1.firstElementChild.style.color = 'white';
 
 // Going upwards: parents
 // console.log(h1.parentNode);
 // console.log(h1.parentElement);
 
-h1.closest('.header').style.background = 'var(--gradient-primary)';
+// h1.closest('.header').style.background = 'var(--gradient-primary)';
 
 // Going sideways: siblings
 // console.log(h4.previousElementSibling); // h1.previous
