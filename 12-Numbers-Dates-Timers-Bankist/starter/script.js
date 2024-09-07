@@ -170,6 +170,7 @@ const createUsernames = function (accs) {
       .join('');
   });
 };
+// console.log(account1);
 createUsernames(accounts);
 
 const updateUI = function (acc) {

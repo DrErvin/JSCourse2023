@@ -42,13 +42,13 @@ Student.prototype.introduce = function () {
 };
 
 const mike = new Student('Mike', 2020, 'Computer Science');
-mike.introduce();
-mike.calcAge();
+// mike.introduce();
+// mike.calcAge();
 
-console.log(mike instanceof Student);
-console.dir(Student.prototype.constructor);
+// console.log(mike instanceof Student);
+// console.dir(Student.prototype.constructor);
 Student.prototype.constructor = Student;
-console.dir(Student.prototype.constructor);
+// console.dir(Student.prototype.constructor);
 
 // matilda.calcAge();
 
@@ -109,48 +109,48 @@ const bmw = new Car('BMW', 120);
 // console.log(bmw.__proto__);
 
 // ES6 classes
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
 
-  // Instance methods
-  // Methods will be added to .prototype property
-  calcAge() {
-    console.log(2037 - this.birthYear);
-  }
+//   // Instance methods
+//   // Methods will be added to .prototype property
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   }
 
-  get age() {
-    return 2037 - this.birthYear;
-  }
+//   get age() {
+//     return 2037 - this.birthYear;
+//   }
 
-  set fullName(name) {
-    // console.log(name);
-    if (name.includes(' ')) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
-  get fullName() {
-    return this._fullName;
-  }
-  // Static method, all instances/objects of a class will not inherit this method
-  // Does not get into prototype property of a class hence no instances
-  // will be able to use static methods
-  static hey() {
-    console.log('Hey there !!!');
-  }
-}
+//   set fullName(name) {
+//     // console.log(name);
+//     if (name.includes(' ')) this._fullName = name;
+//     else alert(`${name} is not a full name!`);
+//   }
+//   get fullName() {
+//     return this._fullName;
+//   }
+//   // Static method, all instances/objects of a class will not inherit this method
+//   // Does not get into prototype property of a class hence no instances
+//   // will be able to use static methods
+//   static hey() {
+//     console.log('Hey there !!!');
+//   }
+// }
 
-const jessica = new PersonCl('Jessica Davis', 1996);
-// console.log(jessica);
-// jessica.calcAge();
-// console.log(jessica.age);
+// const jessica = new PersonCl('Jessica Davis', 1996);
+// // console.log(jessica);
+// // jessica.calcAge();
+// // console.log(jessica.age);
 
-// console.log(jessica.__proto__ === PersonCl.prototype);
+// // console.log(jessica.__proto__ === PersonCl.prototype);
 
-PersonCl.prototype.greet = function () {
-  console.log(`Hey ${this.firstName}`);
-};
+// PersonCl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName}`);
+// };
 // jessica.greet();
 // PersonCl.hey();
 
@@ -171,19 +171,19 @@ const account = {
 account.latest = 50;
 // console.log(account.movements);
 
-const PersonProto = {
-  calcAge() {
-    console.log(2037 - this.birthYear);
-  },
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   },
 
-  init(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  },
-};
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
 
-const steven = Object.create(PersonProto);
-steven.init('Steven', 1979);
+// const steven = Object.create(PersonProto);
+// steven.init('Steven', 1979);
 // console.log(steven);
 // steven.calcAge();
 
@@ -217,3 +217,154 @@ steven.init('Steven', 1979);
 
 // ford.speedUS = 50;
 // console.log(ford);
+
+// CODING CHALLANGE #3
+// const Ev = function (make, speed, charge) {
+//   Car.call(this, make, speed);
+//   this.charge = charge;
+// };
+// Ev.prototype = Object.create(Car.prototype);
+
+// Ev.prototype.chargeBattery = function (chargeTo) {
+//   this.charge = chargeTo;
+// };
+
+// Ev.prototype.accelerate = function () {
+//   this.speed += 20;
+//   this.charge -= 1;
+//   console.log(
+//     `${this.make} going at ${this.speed}, wtih a charge of ${this.charge}%`
+//   );
+// };
+
+// const tesla = new Ev('Tesla', 120, 23);
+// console.log(tesla);
+// tesla.chargeBattery(50);
+// tesla.accelerate();
+
+// console.log(tesla instanceof Ev);
+// Ev.prototype.constructor = Ev;
+// console.dir(Ev.prototype.constructor);
+// // Ev.prototype = Ev;
+// console.dir(Ev);
+
+///////////////////////////////////////
+// Inheritance Between "Classes": ES6 Classes
+
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  // Instance methods
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+
+  get age() {
+    return 2037 - this.birthYear;
+  }
+
+  set fullName(name) {
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // Static method
+  static hey() {
+    console.log('Hey there 👋');
+  }
+}
+
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+}
+
+const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
+// martha.introduce();
+// martha.calcAge();
+
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProto);
+
+const StudentProto = Object.create(PersonProto);
+
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+StudentProto.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const jay = Object.create(StudentProto);
+jay.init('Jay', 2010, 'Computer Science');
+// jay.introduce();
+// jay.calcAge();
+
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    // Protected property
+    this._pin = pin;
+    this._movements = [];
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  getMovements() {
+    return this._movements;
+  }
+  deposit(val) {
+    this._movements.push(val);
+  }
+  withdraw(val) {
+    this.deposit(-val);
+  }
+  _approveLoan(val) {
+    return true;
+  }
+  requestLoan(val) {
+    if (this._approveLoan(val)) {
+      this.deposit(val);
+      console.log('Loan approved');
+    }
+  }
+}
+const acc1 = new Account('Jonas', 'EUR', 1111);
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.requestLoan(1000);
+acc1.approveLoan(1000);
+console.log(acc1.getMovements());
+
+console.log(acc1);
