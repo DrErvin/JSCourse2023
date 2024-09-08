@@ -329,42 +329,115 @@ jay.init('Jay', 2010, 'Computer Science');
 // jay.introduce();
 // jay.calcAge();
 
+// 1) Public fields
+// 2) Private fields
+// 3) Public methods
+// 4) Private methods
+
 class Account {
+  // 1) Public fields(instances)
+  locale = navigator.language;
+
+  // 2) Private fields(instances)
+  #movements = [];
+  #pin;
+
   constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
     // Protected property
-    this._pin = pin;
-    this._movements = [];
-    this.locale = navigator.language;
+    this.#pin = pin;
+    // this._movements = [];
+    // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}`);
   }
-
+  // 3) Public methods
+  // Public Interface(API)
   getMovements() {
-    return this._movements;
+    return this.#movements;
   }
   deposit(val) {
-    this._movements.push(val);
+    this.#movements.push(val);
+    return this;
   }
   withdraw(val) {
     this.deposit(-val);
+    return this;
   }
-  _approveLoan(val) {
-    return true;
-  }
+  // _approveLoan(val) {
+  //   return true;
+  // }
   requestLoan(val) {
-    if (this._approveLoan(val)) {
+    if (this.#approveLoan(val)) {
       this.deposit(val);
       console.log('Loan approved');
+      return this;
     }
   }
+  // 4) Private methods
+  #approveLoan(val) {
+    return true;
+  }
 }
-const acc1 = new Account('Jonas', 'EUR', 1111);
-acc1.deposit(250);
-acc1.withdraw(140);
-acc1.requestLoan(1000);
-acc1.approveLoan(1000);
-console.log(acc1.getMovements());
+// const acc1 = new Account('Jonas', 'EUR', 1111);
+// acc1.deposit(250);
+// acc1.withdraw(140);
+// acc1.requestLoan(1000);
+// acc1.approveLoan(1000);
+// console.log(acc1.getMovements());
+// console.log(acc1);
 
-console.log(acc1);
+// Chaining
+// acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+// console.log(acc1.getMovements());
+
+////////////////////////////////////////////////////
+// CODING CHALLANGE #4
+class CarCl {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+  accelerate() {
+    this.speed += 10;
+    console.log(this.speed);
+  }
+  brake() {
+    this.speed -= 5;
+    console.log(this.speed);
+    return this;
+  }
+
+  get speedUS() {
+    return this.speed / 1.6;
+  }
+  set speedUS(vel) {
+    this.speed = vel * 1.6;
+  }
+}
+
+class EvCl extends CarCl {
+  #charge;
+  constructor(make, speed, charge) {
+    super(make, speed);
+    this.#charge = charge;
+  }
+
+  chargeBattery(chargeTo) {
+    this.#charge = chargeTo;
+    return this;
+  }
+  accelerate() {
+    this.speed += 20;
+    this.#charge -= 1;
+    console.log(
+      `${this.make} going at ${this.speed}, wtih a charge of ${this.#charge}%`
+    );
+    return this;
+  }
+}
+const tesla = new EvCl('Tesla', 120, 23);
+console.log(tesla);
+tesla.accelerate().accelerate().brake().chargeBattery(60).accelerate();
+console.log(tesla);
