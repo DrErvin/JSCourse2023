@@ -84,8 +84,13 @@ class App {
   #mapEvent;
   #workouts = [];
   constructor() {
+    // Get users position
     this.#getPosition();
 
+    // Get data from local storage
+    this.#getLocalStorage();
+
+    // Attach event handlers
     form.addEventListener('submit', this.#newWorkout.bind(this));
     inputType.addEventListener('change', this.#toggleElevationField);
     containerWorkouts.addEventListener('click', this.#moveToPopup.bind(this));
@@ -118,6 +123,10 @@ class App {
 
     // Handling clicks on map
     this.#map.on('click', this.#showForm.bind(this));
+
+    // Rendering local data (rendering workout marker with the local data)
+    // after the map loads
+    this.#workouts.forEach(work => this.#renderWorkoutMarker(work));
   }
 
   #showForm(mapE) {
@@ -190,8 +199,6 @@ class App {
 
     // Add new object to workout array
     this.#workouts.push(workout);
-    console.log(workout);
-    console.log(this.#workouts);
 
     // Render workout on map as marker
     this.#renderWorkoutMarker(workout);
@@ -201,6 +208,9 @@ class App {
 
     // Hide form + Clear input fields
     this.#hideForm();
+
+    // Set local storage to all workouts
+    this.#setLocalStorage();
   }
   #renderWorkoutMarker(workout) {
     // Display marker
@@ -283,7 +293,6 @@ class App {
     const workout = this.#workouts.find(
       work => work.id === workoutEl.dataset.id
     );
-    console.log(workout);
 
     this.#map.setView(workout.coords, 14, {
       animate: true,
@@ -293,7 +302,24 @@ class App {
     });
 
     // Using the public interface
-    workout.click();
+    // workout.click();
+  }
+  #setLocalStorage() {
+    localStorage.setItem('workouts', JSON.stringify(this.#workouts));
+  }
+  #getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem('workouts'));
+
+    if (!data) return;
+
+    this.#workouts = data;
+
+    this.#workouts.forEach(work => this.#renderWorkout(work));
+  }
+  // public interface method
+  reset() {
+    localStorage.removeItem('workouts');
+    location.reload();
   }
 }
 
