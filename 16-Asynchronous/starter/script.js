@@ -4,7 +4,8 @@ const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
 ///////////////////////////////////////
-const getCountryData = function (country) {
+const getCountryAndNeighbourData = function (country) {
+  // AJAX call country 1
   const request = new XMLHttpRequest();
   request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
   request.send();
@@ -13,45 +14,32 @@ const getCountryData = function (country) {
     //   console.log(this.responseText);
     const [data] = JSON.parse(this.responseText);
     console.log(data);
-    ///////////////////////////////////// Setting data for currency
-    // Access the currencies object in the first element of the response
-    const currencies = data.currencies;
-    //   console.log(currencies);
 
-    // Initialize an empty array to store currency data as array of objects
-    const currencyArray = [];
+    //// HTML call, Render country 1
+    renderCountry(data);
 
-    // Use Object.entries() to loop through the object
-    Object.entries(currencies).forEach(([currencyCode, currency]) => {
-      // Push each currency's data as an object into the array
-      currencyArray.push({
-        code: currencyCode,
-        name: currency.name,
-        symbol: currency.symbol,
-      });
+    // Get neighbour country (2)
+    const neighbour = data.borders?.[0];
+
+    // AJAX call country 2
+    const request2 = new XMLHttpRequest();
+    request2.open('GET', `https://restcountries.com/v3.1/alpha/${neighbour}`);
+    request2.send();
+
+    request2.addEventListener('load', function () {
+      const [data2] = JSON.parse(this.responseText);
+      console.log(data2);
+
+      renderCountry(data2, 'neighbour');
     });
+  });
+};
 
-    ///////////////////////////////////// Setting data for language
-    // Access the languages object in the first element of the response
-    const languages = data.languages;
-    console.log(languages);
-
-    // Initialize an empty array to store language data as array of objects
-    const languageArray = [];
-
-    // Use Object.entries() to loop through the object
-    Object.entries(languages).forEach(([languageCode, language]) => {
-      // console.log(`Langauge Code: ${languageCode}, Language: ${language}`);
-      // Push each currency's data as an object into the array
-      languageArray.push({
-        code: languageCode,
-        name: language,
-      });
-    });
-
-    console.log(languageArray);
-    ///////////////////////// Inserting data into HTML
-    const html = `<article class="country">
+const renderCountry = function (data, className = '') {
+  const currencies = data.currencies;
+  const languages = data.languages;
+  // Inserting data into HTML
+  const html = `<article class="country ${className}">
           <img class="country__img" src="${data.flags.svg}" />
           <div class="country__data">
             <h3 class="country__name">${data.name.common}</h3>
@@ -59,14 +47,41 @@ const getCountryData = function (country) {
             <p class="country__row"><span>👫</span>${(
               +data.population / 1000000
             ).toFixed(1)}M people</p>
-            <p class="country__row"><span>🗣️</span>${languageArray[0].name}</p>
-            <p class="country__row"><span>💰</span>${currencyArray[0].name}</p>
+            <p class="country__row"><span>🗣️</span>${
+              getDataFromObj(languages).name
+            }</p>
+            <p class="country__row"><span>💰</span>${
+              getDataFromObj(currencies).name
+            }</p>
           </div>
         </article>`;
-    countriesContainer.insertAdjacentHTML('beforeend', html);
-    countriesContainer.style.opacity = 1;
-  });
+  countriesContainer.insertAdjacentHTML('beforeend', html);
+  countriesContainer.style.opacity = 1;
 };
 
-getCountryData('portugal');
-getCountryData('usa');
+getCountryAndNeighbourData('portugal');
+
+const getDataFromObj = function (dataObj) {
+  // Initialize an empty array to store (ex. currency) data as array of objects
+  const dataObjArray = [];
+
+  // Use Object.entries() to loop through the object
+  Object.entries(dataObj).forEach(([dataObjCode, dataObjValues]) => {
+    // Push each (ex. currency's) data as an object into the array
+    dataObjArray.push({
+      code: dataObjCode,
+      ...(dataObjValues.name
+        ? { name: dataObjValues.name }
+        : { name: dataObjValues }),
+      ...(dataObjValues.symbol ? { symbol: dataObjValues.symbol } : {}),
+    });
+  });
+  // console.log(dataObjArray[0]);
+  return dataObjArray[0];
+};
+
+const getCountryData = function (country) {
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
+    .then(response => response.json())
+    .then(data => renderCountry(data[0]));
+};
