@@ -142,10 +142,91 @@ const getCountryData = function (country) {
     });
 };
 
-const whereAmI = function (lat, lng) {
-  fetch(
-    `https://geocode.xyz/${lat},${lng}?geoit=json&auth=9165854883008172492x68592`
-  )
+// const whereAmI = function (lat, lng) {
+//   fetch(
+//     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=9165854883008172492x68592`
+//   )
+//     .then(response => {
+//       if (!response.ok)
+//         throw new Error(
+//           `Error with the request, too many requests! (${response.status})`
+//         );
+
+//       return response.json();
+//     })
+//     .then(data => {
+//       console.log(data);
+//       console.log(`You are in ${data.city}, ${data.country}`);
+//       getCountryData(data.country);
+//       // if (!neighbour) throw new Error('No neighbour found!');
+//     })
+//     .catch(err => {
+//       console.error(`${err} 💥💥💥`);
+//       renderError(`Something went wrong 💥💥💥 ${err.message}. Try Again!`);
+//       // More simple way
+//       // console.error(`${err.message} 💥`);
+//     });
+// };
+
+// btn.addEventListener('click', function () {
+//   // getCountryData('portugal');
+//   whereAmI(-33.933, 18.474);
+// });
+
+// const lotteryPromise = new Promise(function (resolve, reject) {
+//   console.log('Lottery draw is happening');
+//   setTimeout(function () {
+//     if (Math.random() >= 0.5) {
+//       resolve('You win a lot of money');
+//     } else {
+//       reject(new Error('You lost your money'));
+//     }
+//   }, 2000);
+// });
+
+// lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// // Promisifiying setTimeout
+// const wait = function (seconds) {
+//   return new Promise(function (resolve) {
+//     setTimeout(resolve, seconds * 1000);
+//   });
+// };
+
+// wait(2)
+//   .then(() => {
+//     console.log('I waited for 2 seconds');
+//     return wait(1);
+//   })
+//   .then(() => console.log('I waited for 3 second'));
+
+// Promise.resolve('abc').then(x => console.log(x));
+// Promise.reject(new Error('Problem!')).catch(x => console.error(x));
+
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => resolve(position),
+    //   err => reject(err)
+    // );
+    // Automatically does this by itself (It gives the position object
+    // for the succesfull fullfilled case
+    // and gives an error object for the failed case)
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+// getPosition().then(pos => console.log(pos));
+
+const whereAmI = function () {
+  getPosition()
+    .then(pos => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+
+      return fetch(
+        `https://geocode.xyz/${lat},${lng}?geoit=json&auth=9165854883008172492x68592`
+      );
+    })
     .then(response => {
       if (!response.ok)
         throw new Error(
@@ -170,5 +251,5 @@ const whereAmI = function (lat, lng) {
 
 btn.addEventListener('click', function () {
   // getCountryData('portugal');
-  whereAmI(-33.933, 18.474);
+  whereAmI();
 });
