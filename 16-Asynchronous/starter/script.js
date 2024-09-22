@@ -332,18 +332,77 @@ const whereAmIAsync = async function (country) {
     throw err;
   }
 };
-console.log('1: Will get location');
+// console.log('1: Will get location');
 // whereAmIAsync()
 //   .then(city => console.log(`2: ${city}`))
 //   .catch(err => console.error(`2: ${err.message}`))
 //   .finally(() => console.log('3: Finished getting location'));
 
-(async function () {
+// Iffy function that calls itself immedeatelly
+// (async function () {
+//   try {
+//     const city = await whereAmIAsync();
+//     console.log(`2: ${city}`);
+//   } catch (err) {
+//     console.error(`2: ${err.message} 💥`);
+//   }
+//   console.log('3: Finished getting location');
+// })();
+
+const get3Countries = async function (c1, c2, c3) {
   try {
-    const city = await whereAmIAsync();
-    console.log(`2: ${city}`);
+    // const [data1] = await getJSON(`https://restcountries.com/v3.1/name/${c1}`);
+    // const [data2] = await getJSON(`https://restcountries.com/v3.1/name/${c2}`);
+    // const [data3] = await getJSON(`https://restcountries.com/v3.1/name/${c3}`);
+
+    const data = await Promise.all([
+      getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+      getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+      getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+    ]);
+    console.log(data.map(d => d[0].capital).flat());
   } catch (err) {
-    console.error(`2: ${err.message} 💥`);
+    console.error(err);
   }
-  console.log('3: Finished getting location');
-})();
+};
+// get3Countries('portugal', 'canada', 'tanzania');
+
+// Promise.race
+// (async function () {
+//   const res = await Promise.race([
+//     getJSON(`https://restcountries.com/v3.1/name/italy`),
+//     getJSON(`https://restcountries.com/v3.1/name/egypt`),
+//     getJSON(`https://restcountries.com/v3.1/name/mexico`),
+//   ]);
+//   console.log(res[0]);
+// })();
+
+const timeout = function (sec) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error('Request took too long'));
+    }, sec * 1000);
+  });
+};
+
+// Promise.race([getJSON(`https://restcountries.com/v3.1/name/italy`), timeout(5)])
+//   .then(data => console.log(data[0]))
+//   .catch(err => console.error(err));
+
+// Promise.allSettled (vrati sve promise bez obzira
+// jesu li resolved or rejected)
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another success'),
+]).then(res => console.log(res));
+
+// Promise.any [ES2021] (Returns a resolved promise and
+// igoners rejected ones)
+Promise.any([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another success'),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
