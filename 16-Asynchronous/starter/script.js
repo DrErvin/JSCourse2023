@@ -253,6 +253,8 @@ const whereAmI = function () {
 //   // getCountryData('portugal');
 //   whereAmI();
 // });
+
+// CHALLANGE #2
 const imgContainer = document.querySelector('.images');
 const createImage = function (imgPath) {
   return new Promise(function (resolve, reject) {
@@ -391,18 +393,20 @@ const timeout = function (sec) {
 
 // Promise.allSettled (vrati sve promise bez obzira
 // jesu li resolved or rejected)
-Promise.allSettled([
-  Promise.resolve('Success'),
-  Promise.reject('Error'),
-  Promise.resolve('Another success'),
-]).then(res => console.log(res));
+// Promise.allSettled([
+//   Promise.resolve('Success'),
+//   Promise.reject('Error'),
+//   Promise.resolve('Another success'),
+// ]).then(res => console.log(res));
 
 // Promise.any [ES2021] (Returns a resolved promise and
 // igoners rejected ones)
-Promise.any([
-  Promise.resolve('Success'),
-  Promise.reject('Error'),
-  Promise.resolve('Another success'),
-])
-  .then(res => console.log(res))
-  .catch(err => console.error(err));
+// Promise.any([
+//   Promise.resolve('Success'),
+//   Promise.reject('Error'),
+//   Promise.resolve('Another success'),
+// ])
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err));
+
+// CHALLANGE #3
