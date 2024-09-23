@@ -272,7 +272,7 @@ const createImage = function (imgPath) {
   });
 };
 
-// let currentImg;
+let currentImg;
 
 // createImage('img/img-1.jpg')
 //   .then(img => {
@@ -410,3 +410,43 @@ const timeout = function (sec) {
 //   .catch(err => console.error(err));
 
 // CHALLANGE #3
+// Part 1
+const loadNPause = async function () {
+  try {
+    // Load image 1
+    let img = await createImage('img/img-1.jpg');
+    console.log('Image 1 loaded');
+    await wait(2);
+    img.style.display = 'none';
+
+    // Load image 2
+    img = await createImage('img/img-2.jpg');
+    console.log('Image 2 loaded');
+    await wait(2);
+    img.style.display = 'none';
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+// Part 2
+const loadAll = async function (imgArr) {
+  try {
+    // How I done it
+    // const imgs = await imgArr.map(imgPath => createImage(imgPath));
+    // console.log(imgs);
+
+    // How Jonas done it
+    const imgs = imgArr.map(async imgPath => await createImage(imgPath));
+    console.log(imgs);
+
+    const loadedImgArr = await Promise.all(imgs);
+    loadedImgArr.forEach(img => img.classList.add('parallel'));
+
+    // console.log(data.map(d => d[0].capital).flat());
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
