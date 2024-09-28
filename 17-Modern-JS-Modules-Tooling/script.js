@@ -35,7 +35,7 @@ const lastPost = getLastPost();
 // access to promise result)
 // lastPost.then(last => console.log(last));
 
-const lastPost2 = await getLastPost();
+// const lastPost2 = await getLastPost();
 // console.log(lastPost2);
 
 const ShoppingCart2 = (function () {
@@ -61,4 +61,20 @@ const ShoppingCart2 = (function () {
   };
 })();
 
-ShoppingCart2.addToCart('apple', 4);
+// ShoppingCart2.addToCart('apple', 4);
+
+import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 5 },
+  ],
+  user: { loggedIn: true },
+};
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+console.log(stateDeepClone);
