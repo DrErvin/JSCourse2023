@@ -83,3 +83,11 @@ console.log(stateDeepClone);
 if (module.hot) {
   module.hot.accept();
 }
+
+testArray = [1, 2, 3, 4, 5];
+console.log(testArray.find(el => el > 2));
+import 'core-js/stable';
+Promise.resolve('TEST').then(x => console.log(x));
+
+// Polifilling async functions
+import 'regenerator-runtime/runtime.js';

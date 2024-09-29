@@ -1,11 +1,11 @@
-6545
+6547
 107D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\get-port133720037155375609 1
 129D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\csso\lib\clean\TypeSelector.js133720037185324034 0
 107D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\escalade133720037162905457 1
 122D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\semver\functions\inc.js133720037168016866 0
 142D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\caniuse-lite\data\features\web-animation.js133720037259880020 0
 139D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\htmlnano\lib\modules\removeUnusedCss.cjs133720037176923376 0
-90D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist133720042306486543 1
+90D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist133720749939220109 1
 133D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\cosmiconfig\dist\ExplorerSync.d.ts133720037179745824 0
 122D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\lodash-es\_baseWhile.js133720030951624708 0
 118D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\nth-check\README.md133720037169871902 0
@@ -99,7 +99,7 @@
 123D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@mischnic\json-sourcemap133720037152323770 1
 126D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\lodash-es\_strictIndexOf.js133720030953380005 0
 126D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\react-error-overlay\LICENSE133720037134126416 0
-98D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\package.json133720042221140388 0
+98D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\package.json133720749039704646 0
 123D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\json5\lib\stringify.d.ts133720037169572706 0
 123D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\lodash-es\_createOver.js133720030952093451 0
 122D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\lodash-es\capitalize.js133720030953749018 0
@@ -3925,7 +3925,7 @@
 140D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\css-tree\lib\utils\create-custom-error.js133720037188724934 0
 138D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\caniuse-lite\data\features\flow-root.js133720037193263975 0
 126D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\css-tree\lib\utils\index.js133720037190989072 0
-112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.8cfc62b9.js.map133720042306471285 0
+112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.8cfc62b9.js.map133720749137818841 0
 150D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\optimizer-htmlnano\lib\HTMLNanoOptimizer.js133720037134986782 0
 127D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\css-tree\lib\utils\string.js133720037191996378 0
 146D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\css-tree\lib\tokenizer\char-code-definitions.js133720037188515493 0
@@ -5714,7 +5714,7 @@
 129D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\runtime-js\src\helpers133720037179197291 1
 134D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\runtime-js\src\JSRuntime.js133720037177940651 0
 137D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\runtime-js\src\helpers\browser133720037178738522 1
-101D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.html133720038569900887 0
+101D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.html133720749939130350 0
 143D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\runtime-js\src\helpers\bundle-url.js133720037160152824 0
 144D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\runtime-js\src\helpers\cacheLoader.js133720037162067695 0
 147D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\runtime-js\src\helpers\get-worker-url.js133720037168226302 0
@@ -6383,6 +6383,7 @@
 154D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\core\test\fixtures\invalid-targets\package.json133720037190889335 0
 169D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\core\test\fixtures\invalid-target-source-not-file\package.json133720037190849445 0
 153D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\core\test\fixtures\invalid-source-not-file\src133720037184695716 1
+112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.b10804c8.js.map133720749939210141 0
 114D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\.bin\semver.ps1133720037261002120 0
 146D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\core\test\fixtures\glob-like\[entry].js133720037169093988 0
 156D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\@parcel\core\test\fixtures\duplicate-targets\package.json133720037190649979 0
@@ -6543,4 +6544,5 @@
 110D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\.bin\parcel133720037261002120 0
 110D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\.bin\semver133720037261002120 0
 114D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\node_modules\.bin\semver.cmd133720037261002120 0
-108D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.8cfc62b9.js133720042306371553 0
+108D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.8cfc62b9.js133720749137778945 0
+108D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\17-Modern-JS-Modules-Tooling\dist\index.b10804c8.js133720749939130350 0
