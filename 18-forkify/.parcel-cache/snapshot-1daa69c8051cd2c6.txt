@@ -1,4 +1,4 @@
-9721
+9718
 113D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\src\public\Asset.js133724234736210800 0
 87D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\base-x133724234696562994 1
 130D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\features\string\virtual\is-well-formed.js133724277771627748 0
@@ -13,7 +13,7 @@
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\number\epsilon.js133724277760684323 0
 99D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\.package-lock.json133725938107722951 0
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\csso\cjs\replace\Percentage.cjs133724234738205132 0
-72D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist133733872089083648 1
+72D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist133734070312555604 1
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\csso\node_modules\css-tree\cjs133724234789284401 1
 102D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\csso\dist\csso.esm.js133724234747862606 0
 110D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\nullthrows\nullthrows.js.flow133724234708733937 0
@@ -78,7 +78,7 @@
 140D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_load.c133724234743212336 0
 113D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\cosmiconfig\dist\readFile.js.map133724234740368911 0
 101D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\json5\lib\unicode.js133724234727721141 0
-80D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\package.json133725938106539620 0
+80D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\package.json133734069938450893 0
 109D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\source-map\lib\quick-sort.js133724234726923364 0
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\dom-serializer\lib\esm\index.js133724234707543151 0
 136D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\css-select\node_modules\domutils\lib\esm\traversal.d.ts133724234747210730 0
@@ -107,7 +107,7 @@
 93D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\src\sass\_components.scss133724221808800266 0
 116D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\mdn-data\css\properties.schema.json133724234734519081 0
 157D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\build-test.js133724234680673229 0
-74D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\src\js133725949853057893 1
+74D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\src\js133734068673911193 1
 102D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\csso\cjs\compress.cjs133724234733044390 0
 134D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\csso\node_modules\css-tree\lib\syntax\atrule\index.js133724234791096703 0
 114D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\es.reflect.get.js133724277761698857 0
@@ -266,7 +266,7 @@
 131D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\csso\node_modules\css-tree\cjs\syntax\node\CDO.cjs133724234729232627 0
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\regexp\dot-all.js133724277759989558 0
 114D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@swc\helpers\cjs\_await_value.cjs133724234790607618 0
-83D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\src\js\model.js133733844984880594 0
+83D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\src\js\model.js133734068673921208 0
 121D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\features\set\is-disjoint-from.js133724277770419626 0
 101D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\import-fresh\license133724234656205335 0
 107D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\math\atanh.js133724277756991680 0
@@ -1608,6 +1608,7 @@
 121D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\css-select\node_modules\entities\lib\esm133724234747885003 1
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\nth-check\lib\esm\compile.d.ts133724234735210005 0
 133D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\lmdb\node_modules\node-addon-api\tools\conversion.js133724234731312734 0
+93D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\favicon.6fc724c6.png133734070254037909 0
 113D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\es.array.push.js133724277761010196 0
 135D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\rust\parcel-node-bindings.linux-arm64-gnu.node133724234817007699 0
 99D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\svgo\lib\svgo.d.ts133724234736878702 0
@@ -4220,7 +4221,6 @@
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\caniuse-lite\data\regions\WS.js133724234843378019 0
 117D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\es.object.has-own.js133724277761487602 0
 106D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\css-tree\cjs\syntax\scope133724234789549246 1
-93D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\favicon.8b2f57bf.png133733844986211646 0
 124D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\es.typed-array.find-last.js133724277762442354 0
 120D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\reflect\is-extensible.js133724277770449541 0
 124D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\css-tree\cjs\syntax\scope\atrulePrelude.cjs133724234723554132 0
@@ -4964,7 +4964,6 @@
 109D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\stable\string\sub.js133724277778769802 0
 109D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\stable\string\sup.js133724277778990722 0
 120D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\stable\string\to-well-formed.js133724277781438336 0
-90D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\logo.726d37a8.png133733844986301399 0
 119D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\string\virtual\blink.js133724277757189484 0
 114D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\stable\string\trim-end.js133724277781605691 0
 116D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\stable\string\trim-right.js133724277781825105 0
@@ -5322,7 +5321,6 @@
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\caniuse-lite\data\regions\CX.js133724234814195231 0
 124D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\proposals\async-iterator-helpers.js133724277756676748 0
 120D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\proposals\collection-methods.js133724277757712283 0
-95D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\18-forkify.3464ddca.js133724236539269476 0
 97D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\.bin\js-yaml.ps1133724234843879327 0
 120D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\proposals\collection-of-from.js133724277757712283 0
 113D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\es.array.sort.js133724277761044836 0
@@ -5469,7 +5467,6 @@
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\workers\lib\backend.js133724234670237387 0
 121D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\es.number.constructor.js133724277761336937 0
 117D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\es.number.epsilon.js133724277761336937 0
-91D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.f7626f62.css133733844986351264 0
 121D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\typed-array\find-index.js133724277765194270 0
 128D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\lib\requests\WriteBundleRequest.js133724234790917832 0
 118D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\esnext.global-this.js133724277762994386 0
@@ -5699,6 +5696,7 @@
 119D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\esnext.map.group-by.js133724277763313176 0
 116D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\esnext.map.merge.js133724277763363047 0
 113D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\esnext.map.of.js133724277763373020 0
+98D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.runtime.98d69dbf.js133734070312501040 0
 121D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\features\string\virtual\fixed.js133724277765703493 0
 127D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\modules\esnext.map.update-or-insert.js133724277763392967 0
 146D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\color.js133724234732283564 0
@@ -5947,7 +5945,6 @@
 116D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\caniuse-lite\data\features\proxy.js133724234838082596 0
 114D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\workers\lib\childState.js133724234723489430 0
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\internals\math-log10.js133724277773708833 0
-90D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.e37f48ea.js133733872089013838 0
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\internals\math-sign.js133724277773728779 0
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\internals\math-trunc.js133724277773758695 0
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\internals\microtask.js133724277773938214 0
@@ -6562,6 +6559,7 @@
 126D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\array\virtual\group-by-to-map.js133724277767714685 0
 119D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\array\virtual\group-by.js133724277767854311 0
 116D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\array\virtual\group.js133724277768019711 0
+91D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.bb84a947.css133734070312501040 0
 124D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\array\virtual\last-index-of.js133724277772722957 0
 127D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@swc\helpers\src\_class_private_field_init.mjs133724234815372079 0
 115D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\full\array\virtual\push.js133724277775288309 0
@@ -7602,6 +7600,7 @@
 110D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\promise\any.js133724277756080067 0
 114D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\promise\finally.js133724277765156472 0
 110D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\promise\try.js133724277782114325 0
+91D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\icons.c14567a0.svg133734070310850302 0
 121D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\promise\with-resolvers.js133724277783480672 0
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\object\create.js133724277758372740 0
 119D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\core-js\actual\object\define-getter.js133724277758681426 0
@@ -9415,7 +9414,6 @@
 123D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\node-resolver-core\lib\builtins.js133724234705559226 0
 120D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\node-resolver-core\lib\index.js133724234711680970 0
 121D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\node-resolver-core\lib\_empty.js133724234669603988 0
-91D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\icons.21bad73c.svg133733844986211646 0
 110D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\namer-default\LICENSE133724234658383451 0
 115D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\namer-default\package.json133724234705924075 0
 106D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\namer-default\src133724234684091711 1
@@ -9532,6 +9530,7 @@
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\src\assetUtils.js133724234740034487 0
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\src\BundleGraph.js133724234743379261 0
 115D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\src\CommittedAsset.js133724234745374359 0
+90D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\logo.0bc30d8d.png133734070309603643 0
 110D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\src\constants.js133724234746843097 0
 111D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\src\Dependency.js133724234747210730 0
 120D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\@parcel\core\src\dumpGraphToGraphViz.js133724234748211072 0
@@ -9713,10 +9712,8 @@
 94D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\.bin\svgo.cmd133724234843879327 0
 108D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\.bin\update-browserslist-db133724234843879327 0
 112D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\node_modules\.bin\update-browserslist-db.ps1133724234843879327 0
-99D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\18-forkify.3464ddca.js.map133724236539319788 0
-90D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.62406edb.js133724236539269476 0
-94D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.62406edb.js.map133724236539319788 0
-91D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\icons.dfd7a6db.svg133733844986301399 0
-83D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.html133733844986301399 0
-95D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.f7626f62.css.map133733844986386277 0
-94D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.e37f48ea.js.map133733872089073676 0
+95D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.bb84a947.css.map133734070312545699 0
+90D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.bbedce5d.js133734070312501040 0
+94D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.bbedce5d.js.map133734070312555604 0
+83D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.html133734070312501040 0
+102D:\Udemy JS course 2023\Git Main Repository\JSCourse2023\18-forkify\dist\index.runtime.98d69dbf.js.map133734070312545699 0
